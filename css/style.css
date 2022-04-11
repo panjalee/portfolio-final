@@ -1,0 +1,259 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+nav li{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-family: 'Space Mono', monospace;
+    border: 2px solid rgb(48, 33, 33);
+    background-color: white;
+}
+
+nav a{
+    color: black;
+  }
+
+li a:visited{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+li a { 
+    text-decoration: none;  
+    color: black;
+}
+
+.active{
+    background-color: rgb(176, 179, 223);
+    text-transform: uppercase;
+    text-decoration: black wavy underline;
+    text-shadow: 2px 0px 0px rgb(228, 222, 222);
+}
+
+a.skip{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    left: -500px;
+    color: black;
+    text-decoration: none;
+}
+
+a.skip:focus {
+    top: 20px;
+    left: 0px;
+  } 
+
+#bodyLifestyle, #bodyPhotography{
+    background-image: url('../images/lines.jpeg');
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-size: 30px;
+    font-family: 'Space Mono', monospace;
+    margin: 20px;
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer{
+    background-color: rgb(176, 179, 223);
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px;
+    text-align: center;
+}
+
+img{
+    margin: 30px;
+    width: 150px;
+    border: 3px dashed rgb(48, 33, 33);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+img:hover:nth-child(2n) {
+    border: 3px dashed rgb(140, 144, 207);
+    opacity: 0.2;
+}
+
+.destinations{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.foods{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.headshot{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation-name: spin;
+    animation-duration: 3s;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg); opacity:0;}
+    100% {transform: rotate(720deg); opacity:1;}
+}
+
+input[type=text], input[type=number], input[type=email]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(140, 144, 207);
+  }
+
+button[type=submit]{
+    width: 70px;
+    padding: 8px;
+    font-family: 'Space Mono', monospace;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-family: 'Space Mono', monospace;
+}
+
+textarea{
+    padding: 10px 15px;
+    margin: 8px 0;
+    height: 50px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formIntro
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.question{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Space Mono', monospace;
+    padding: 2px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.options{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.icons a{
+    border: none;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    padding-right: 2px;
+    padding-left: 2px;
+} 
+
+.photosText, .lifestyleText{
+    background-color: whitesmoke;
+}
+
+header > span {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    background-color: rgb(189, 192, 236);
+    padding: 2px;
+    margin-top: 10px;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade{
+    0% {opacity:0;}
+    50% {opacity: 0.5;}
+    100% {opacity:1;}
+}
+
+@media screen and (min-width: 720px){
+    header ul{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        flex-direction: row-reverse;
+        justify-content: end;
+        justify-content: space-between;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+    .headshot{
+        animation-duration: 0s;
+    }
+
+    header > span {
+        animation-duration: 0s;
+    }
+
+    #bodyLifestyle, #bodyPhotography{
+        background-attachment: initial;
+    }
+
+    html{
+        scroll-behavior: auto; 
+    }
+
+    a.skip {
+        -webkit-transition: initial; 
+        transition: initial; 
+    }
+    
+
+}
