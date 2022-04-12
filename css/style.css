@@ -282,6 +282,11 @@ header > span {
     transform: rotateY(180deg);
   } 
 
+  .destinations span{
+    background-color: rgb(192, 195, 236);
+    font-family: 'Roboto', sans-serif;
+  }
+
 @media screen and (min-width: 720px){
     header ul{
         display: flex;
@@ -296,6 +301,20 @@ header > span {
         justify-content: space-between;
         margin-left: 10px;
         margin-right: 5px;
+    }
+
+    .photosText{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .destinations{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .foods{
+        flex-direction: row;
     }
 }
 

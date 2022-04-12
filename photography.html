@@ -21,24 +21,104 @@
 </script>
 <script src="https://kit.fontawesome.com/172fe4008b.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
-function displayWeather () {
-    const url1 = 'https://api.openweathermap.org/data/2.5/weather?lat=42.4311&lon=-83.4833&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
-    fetch(url1)
+function displayWeather1 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=42.4311&lon=-83.4833&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
     .then(response => response.json())
     .then(data => {
         const main_ = data.main;
         const temp_ = main_.temp;
-  
-        document.getElementById("northville").innerHTML = temp_;
-    const url2 = 'https://api.openweathermap.org/data/2.5/weather?lat=37.8136&lon=144.9631&appid=960decba0fffc13c3c9a3fb16173ae69';
-    fetch(url2)
-    .then(response => response.json())
-    .then(data => {
-        const main_ = data.main;
-        const temp_ = main_.temp;
-        const temp_F = (1.8*(temp_ - 273)) + 32;
-        document.getElementById("melbourne").innerHTML = temp_F;
+        document.getElementById("northville").innerHTML = "Current temperature in Northville, Michigan is " + Math.round(temp_) + "°F";
     })
+    }
+function displayWeather2 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-37.8136&lon=144.9631&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("melbourne").innerHTML = "Current temperature in Melbourne, Australia is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather3 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-17.687344&lon=-149.445168&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("papeete").innerHTML = "Current temperature in Papeete, Tahiti is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather4 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-51.507322&lon=-0.127647&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("london").innerHTML = "Current temperature in London, United Kingdom is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather5 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-22.911014&lon=-43.209373&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("rio").innerHTML = "Current temperature in Rio de Janeiro, Brazil is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather6 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=29.987075&lon=31.211806&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("giza").innerHTML = "Current temperature in Gize, Egypt is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather7 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=45.437191&lon=12.334590&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("venice").innerHTML = "Current temperature in Venice, Italy is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather8 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=48.263444&lon=8.164749&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("black-forest").innerHTML = "Current temperature in Black Forest, Germany is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather9 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-37.8136&lon=144.9631&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("beijing").innerHTML = "Current temperature in Beijing, China is " + Math.round(temp_) + "°F";
+    })
+    }
+function displayWeather10 () {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=39.906217&lon=116.391276&appid=960decba0fffc13c3c9a3fb16173ae69&units=imperial';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const main_ = data.main;
+        const temp_ = main_.temp;
+        document.getElementById("bela-bela").innerHTML = "Current temperature in Bela Bela, South Africa is " + Math.round(temp_) + "°F";
     })
     }
 </script>
@@ -59,7 +139,7 @@ function displayWeather () {
     <main>
         <h1 id="main">Photography</h1>
     <div class = "photosText">
-    <p> What is the subject of my photography? Travel. Why Travel? Travel is often 
+    <p> What is the context surrounding most of my photography? Travel. Why Travel? Travel is often 
     known as the only thing you buy that makes you richer. Since I was about 
     5 years old I've had the opportunity to travel to places 
     far beyond what my imagination could have dreamt up. 
@@ -82,18 +162,46 @@ function displayWeather () {
         </p>
     </div>
     <div class="destinations">
-    <img onclick="displayWeather()" src = "images/northville.jpeg" alt = "cider mill northville" width = "200"/>
+    <div>
+    <img onclick= "displayWeather1()" src = "images/northville.jpeg" alt = "cider mill northville" width = "200"/>
         <span id = 'northville'></span>
-    <img onclick="displayWeather()" src = "images/australia.jpeg" alt = "board walk australia" width = "200"/>
+    </div>
+    <div>
+    <img onclick="displayWeather2()" src = "images/australia.jpeg" alt = "board walk australia" width = "200"/>
         <span id = 'melbourne'></span>
-    <img src = "images/tahiti.jpeg" alt = "tahiti hut" width = "200"/>
-    <img src = "images/london.jpg" alt = "phone booth london" width = "200"/>
-    <img src = "images/brazil.jpg" alt = "brazil steps" width = "200"/>
-    <img src = "images/giza.jpg" alt = "pyramids in giza" width = "200"/>
-    <img src = "images/venice.jpg" alt = "venice canals" width = "200"/>
-    <img src = "images/germany.jpg" alt = "germany car" width = "200"/>
-    <img src = "images/china.jpg" alt = "great wall of china" width = "200"/>
-    <img src = "images/africa.jpg" alt = "game lodge africa" width = "200"/>
+    </div>
+    <div>
+    <img onclick="displayWeather3()" src = "images/tahiti.jpeg" alt = "tahiti hut" width = "200"/>
+        <span id = 'papeete'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather4()" src = "images/london.jpg" alt = "phone booth london" width = "200"/>
+        <span id = 'london'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather5()" src = "images/brazil.jpg" alt = "brazil steps" width = "200"/>
+        <span id = 'rio'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather6()" src = "images/giza.jpg" alt = "pyramids in giza" width = "200"/>
+        <span id = 'giza'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather7()" src = "images/venice.jpg" alt = "venice canals" width = "200"/>
+        <span id = 'venice'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather8()" src = "images/germany.jpg" alt = "germany car" width = "200"/>
+        <span id = 'black-forest'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather9()" src = "images/china.jpg" alt = "great wall of china" width = "200"/>
+        <span id = 'beijing'></span>
+    </div>
+    <div>
+    <img onclick="displayWeather10()" src = "images/africa.jpg" alt = "game lodge africa" width = "200"/>
+        <span id = 'bela-bela'></span>
+    </div>
     </div>
 </main>
 <footer>
