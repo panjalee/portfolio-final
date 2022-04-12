@@ -129,11 +129,9 @@ img:hover:nth-child(2n) {
     animation-duration: 3s;
 }
 
-.logos{
-    display: flex;
-    justify-content: center;
+.work-content{
+    justify-items: center;
     flex-wrap: wrap;
-    margin: 20px;
 }
 
 .flip-google img{
@@ -282,10 +280,35 @@ header > span {
     transform: rotateY(180deg);
   } 
 
-  .destinations span{
+  .destinations #northville, .destinations #melbourne, 
+  .destinations #papeete, .destinations #london, 
+  .destinations #rio, .destinations #giza, 
+  .destinations #venice,  .destinations #black-forest, 
+  .destinations #beijing, .destinations #bela-bela {
     background-color: rgb(192, 195, 236);
     font-family: 'Roboto', sans-serif;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
   }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
 
 @media screen and (min-width: 720px){
     header ul{
@@ -305,7 +328,7 @@ header > span {
 
     .photosText{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .destinations{
@@ -313,8 +336,43 @@ header > span {
         grid-template-rows: 1fr 1fr 1fr;
     }
 
+    .destinations div{
+        display: flex;
+        flex-direction: column;
+    }
+
     .foods{
         flex-direction: row;
+    }
+
+    .work-content{
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 2fr;
+    }
+
+    #main{
+        grid-area: 1 / 2 / 2 / 3;
+        margin-right: 248px;
+    }
+
+    .work-content1{
+        margin-top: 80px;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .flip-paypal{
+        grid-area: 1 / 1 / 2 / 2;
+        margin-top: 60px;
+
+    }
+
+    .work-content2{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .flip-google{
+        grid-area: 2 / 1 / 3 / 2;
+  
     }
 }
 

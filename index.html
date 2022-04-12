@@ -30,7 +30,9 @@ function displayInformation () {
     </script>
 </head>
 
-<body onload="displayInformation();">
+<body onload="displayInformation(); displaypage()" >
+        <div id="wrapperdiv" style="display:none;height:500px;width:300px;background-color:red;">
+        </div>
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
         <nav>
@@ -67,6 +69,9 @@ function displayInformation () {
     <div class = "headshot">
     <img src = "images/headshot.jpg" alt = "headshot of myself (anjalee)" width = "200"/>
     </div>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/cZB0q4mFoAg&t">
+    </iframe>
     <h2 id="contact">Contact Me</h2>
     <p class = formIntro> Have any comments, questions, or anything else you would like to share? You can also contact me through this
         form! </p>

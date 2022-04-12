@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/lightbox.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifestyle</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -49,8 +50,8 @@
         </p>
     </div>
     <div class="foods">
-    <img src = "images/burger.jpg" alt = "burger" width = "200"/>
-    <img src = "images/pepper_eggs.jpg" alt = "eggs with peppers" width = "200"/>
+    <a href="images/burger.jpg" data-lightbox="food" data-title="Burger"><img src = "images/burger.jpg" alt = "burger" width = "200"/></a>
+    <a href="images/pepper_eggs.jpg" data-lightbox="food" data-title="Eggs"><img src = "images/pepper_eggs.jpg" alt = "eggs with peppers" width = "200"/></a>
     <img src = "images/enchilada.jpeg" alt = "enchilada" width = "200"/>
     <img src = "images/pizza.jpeg" alt = "pizza" width = "200"/>
     <img src = "images/fruit_bowl.jpeg" alt = "fruit bowl" width = "200"/>
@@ -70,5 +71,6 @@
         <a aria-label="linkedin icon" href = https://www.linkedin.com/in/anjalee-patel-michigan> <i class="fa-brands fa-linkedin"></i></a></p>
     <p>Created with love by Anjalee Patel (April 2022)</p>
 </footer>
+<script src="dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
