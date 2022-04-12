@@ -37,7 +37,7 @@ li a {
     background-color: rgb(176, 179, 223);
     text-transform: uppercase;
     text-decoration: black wavy underline;
-    text-shadow: 2px 0px 0px rgb(228, 222, 222);
+    text-shadow: 2px 0px 0px whitesmoke;
 }
 
 a.skip{
@@ -53,15 +53,25 @@ a.skip:focus {
     left: 0px;
   } 
 
+body{
+    background-color: whitesmoke;
+}
+
 #bodyLifestyle, #bodyPhotography{
     background-image: url('../images/lines.jpeg');
-    background-size: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 h1{
     font-size: 30px;
+    font-family: 'Space Mono', monospace;
+    margin: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 24px;
     font-family: 'Space Mono', monospace;
     margin: 20px;
     text-align: center;
@@ -123,6 +133,17 @@ img:hover:nth-child(2n) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 20px;
+}
+
+.flip-google img{
+    height: 100px;
+    width: 100px;
+}
+
+.flip-paypal img{
+    height: 100px;
+    width: 100px;
 }
 
 @keyframes spin{
@@ -137,6 +158,7 @@ input[type=text], input[type=number], input[type=email]{
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid rgb(140, 144, 207);
+    background-color: whitesmoke;
   }
 
 button[type=submit]{
@@ -155,6 +177,7 @@ textarea{
     padding: 10px 15px;
     margin: 8px 0;
     height: 50px;
+    background-color: whitesmoke;
 }
 
 form{
@@ -215,6 +238,50 @@ header > span {
     100% {opacity:1;}
 }
 
+.flip-paypal, .flip-google {
+    background-color: transparent;
+    width: 185px;
+    height: 180px;
+    margin: 20px;
+  }
+  
+  .flip-paypal-inner, .flip-google-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-paypal:hover .flip-paypal-inner, .flip-google:hover .flip-google-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-paypal-front, .flip-paypal-back, .flip-google-front, .flip-google-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .flip-paypal-back, .flip-google-back {
+    background-color: rgb(229, 230, 243);
+    color: rgb(2, 2, 2);
+    transform: rotateY(180deg);
+    border: 3px dashed rgb(48, 33, 33);
+    border-radius: 8px;
+  }
+
+  .flip-paypal:focus-within .flip-paypal-inner, .flip-paypal:active .flip-paypal-inner, .flip-paypal:focus .flip-paypal-inner {
+    transform: rotateY(180deg);
+  } 
+
+  .flip-google:focus-within .flip-google-inner, .flip-google:active .flip-google-inner, .flip-google:focus .flip-google-inner {
+    transform: rotateY(180deg);
+  } 
+
 @media screen and (min-width: 720px){
     header ul{
         display: flex;
@@ -227,7 +294,7 @@ header > span {
         flex-direction: row-reverse;
         justify-content: end;
         justify-content: space-between;
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: 5px;
     }
 }
