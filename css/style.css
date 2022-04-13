@@ -285,6 +285,8 @@ header > span {
   .destinations #rio, .destinations #giza, 
   .destinations #venice,  .destinations #black-forest, 
   .destinations #beijing, .destinations #bela-bela {
+    display: grid;
+    flex-wrap: wrap;
     background-color: rgb(192, 195, 236);
     font-family: 'Roboto', sans-serif;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -334,6 +336,10 @@ header > span {
         text-align: center;
     }
 
+    .foods{
+        flex-direction: row;
+    }
+
     .destinations{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -344,28 +350,22 @@ header > span {
         margin-left: 20px;
     }
 
-    .beijing{
-        grid-column: 2 / 3;
-    }
-
     .destinations div{
-        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
 
-    .destinations span{
-        flex-wrap: wrap;
+    .beijing{
+        grid-column: 2 / 3;
     }
 
-    .foods{
-        flex-direction: row;
+    .destinations span{
+        word-wrap: break-word;
     }
 
     .work-content{
         display: grid;
         grid-template-columns: 1fr, 1fr, 2fr;
-
     }
 
     .work-content1{
@@ -433,6 +433,11 @@ header > span {
         width: 700px;
     }
 
+    .lightbox .lb-image {
+        margin: 0px;
+        padding: 0px;
+    }
+
 
 }
 
@@ -445,6 +450,8 @@ header > span {
     header > span {
         animation-duration: 0s;
     }
+
+    /* flip card add */
 
     #bodyLifestyle, #bodyPhotography{
         background-attachment: initial;
