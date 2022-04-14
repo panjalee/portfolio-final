@@ -27,12 +27,10 @@ function displayInformation () {
     var day = weekday[d.getDay()];
     document.getElementById("dayofWeek").innerHTML = day;
 }
-    </script>
+</script>
 </head>
 
-<body onload="displayInformation(); displaypage()" >
-        <div id="wrapperdiv" style="display:none;height:500px;width:300px;background-color:red;">
-        </div>
+<body onload="displayInformation()" >
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
         <nav>
@@ -49,7 +47,6 @@ function displayInformation () {
       </header>
     <main>
         <h1 id="main">About Me</h1>
-    <div class = main-page>
     <div class = main-content>
     <p> Hi, I'm Anjalee!! I grew up in Northville, MI and our downtown is filled with Victorian-era architecture and small coffee shops. 
         From a young age, my family and I have been traveling from Alaska all the way to 
@@ -67,45 +64,43 @@ function displayInformation () {
         teacher for Seven Mile Coding bridging the digital divide, I know that there are so many ways to empower and understand one another. 
         This site is meant to be a creative outlet where I can show you my work and my passions. 
         Please feel free to reach me at 734-890-8743 or panjalee@umich.edu! 
-        </p>
+    </p>
     </div>
     <div class = headshot-video>
-    <div class = "headshot">
-    <img src = "images/headshot.jpg" alt = "headshot of myself (anjalee)" width = "200"/>
-    </div>
-    <div class = video>
-    <object data='https://www.youtube.com/embed/cZB0q4mFoAg?cc_load_policy=1&cc_lang_pref=en' 
-					title="umsi classes"></object>
+        <div class = "headshot">
+            <img src = "images/headshot.jpg" alt = "headshot of myself (anjalee)" width = "200"/>
         </div>
-</div>
+        <div class = video>
+            <object data='https://www.youtube.com/embed/cZB0q4mFoAg' title="umsi classes" aria-label="umsi classes for bsi program"></object>
+        </div>
+    </div>
     <h2 id="contact">Contact Me</h2>
-    <p class = formIntro> Have any comments, questions, or anything else you would like to share? You can also contact me through this
-        form! </p>
-    <form class = contact-fill
-    action="https://formspree.io/f/mzbovvkd"
-    method="POST">
-    <div class = first-three>
-    <label>
-        Name:
-        <input type="text" name="name">
-    </label>
-    <label>
-        Number:
-        <input type="number" name="number">
-    </label>
-    <label>
-        Email:
-        <input type="email" name="email">
+    <p class = formIntro> Have any comments, questions, or anything else you would like to share? You can also contact me through this form! </p>
+    <form 
+        action="https://formspree.io/f/mzbovvkd"
+        method="POST">
+    <div class = name-num-email>
+        <label>
+            Name:
+            <input type="text" name="name">
+        </label>
+        <label>
+            Number:
+            <input type="number" name="number">
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email">
+        </label>
     </div>
-    <div class = question-opt>
-    </label>
+    <div class = question-option>
         <span class = "question">Are you okay with me contacting you back?</span>
-    <div class = "options">
-        <input type="radio" name="contact permission" id="yes" value="yes"> 
-        <label for="yes">Yes</label>
-        <input type="radio" name="contact no permission" id="no" value="no">
-        <label for="no">No</label>
-    </div>
+        <div class = "options">
+            <input type="radio" name="contact permission" id="yes" value="yes"> 
+            <label for="yes">Yes</label>
+            <input type="radio" name="contact no permission" id="no" value="no">
+            <label for="no">No</label>
+        </div>
     </div>
     <label>
         Message:<br>
@@ -113,7 +108,6 @@ function displayInformation () {
     </label>
     <button type="submit">Sumbit</button>
     </form>
-</div>
 </main>
 <footer>
     <p class = "icons">

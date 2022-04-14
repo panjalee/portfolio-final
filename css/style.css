@@ -19,7 +19,7 @@ nav li{
 
 nav a{
     color: black;
-  }
+}
 
 li a:visited{
     text-decoration: none;
@@ -48,10 +48,10 @@ a.skip{
     text-decoration: none;
 }
 
-a.skip:focus {
+a.skip:focus{
     top: 20px;
     left: 0px;
-  } 
+} 
 
 body{
     background-color: whitesmoke;
@@ -77,10 +77,11 @@ h2{
     text-align: center;
 }
 
-p {
+p{
     line-height: 25px;
     margin: 20px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 footer{
@@ -90,7 +91,10 @@ footer{
 
 footer p {
     margin: 5px;
-    text-align: center;
+}
+
+span{
+    font-family: 'Roboto', sans-serif;
 }
 
 img{
@@ -109,7 +113,6 @@ img:hover:nth-child(2n) {
 .destinations{
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
     justify-items: center;
 }
 
@@ -124,11 +127,20 @@ img:hover:nth-child(2n) {
 .headshot{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     animation-name: spin;
     animation-duration: 3s;
 }
 
+@keyframes spin{
+    0% {transform: rotate(0deg); opacity:0;}
+    100% {transform: rotate(720deg); opacity:1;}
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
 
 .flip-google img{
     height: 100px;
@@ -138,11 +150,6 @@ img:hover:nth-child(2n) {
 .flip-paypal img{
     height: 100px;
     width: 100px;
-}
-
-@keyframes spin{
-    0% {transform: rotate(0deg); opacity:0;}
-    100% {transform: rotate(720deg); opacity:1;}
 }
 
 input[type=text], input[type=number], input[type=email]{
@@ -180,22 +187,18 @@ form{
     flex-direction: column;
 }
 
-.formIntro
-{
+.formIntro{
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
 .question{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     font-family: 'Space Mono', monospace;
     padding: 2px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 6px;
     text-align: center;
 }
 
@@ -206,14 +209,18 @@ form{
     margin-bottom: 20px;
 }
 
-.first-three{
-    display: flex;
-    flex-direction: column;
+#yes{
+    margin-right: 8px;
 }
 
-.video{
+#no{
+    margin-right: 8px;
+    margin-left: 25px;
+}
+
+.name-num-email{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .icons a{
@@ -229,7 +236,6 @@ form{
 }
 
 header > span {
-    font-family: 'Roboto', sans-serif;
     font-style: italic;
     background-color: rgb(189, 192, 236);
     padding: 2px;
@@ -248,21 +254,20 @@ header > span {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    text-align: center;
 }
 
-.work-content1 {
+.work-content1{
     margin-top: 0px;
 }
 
-.flip-paypal, .flip-google {
+.flip-paypal, .flip-google{
     background-color: transparent;
     width: 185px;
     height: 180px;
     margin: 20px;
 }
   
-.flip-paypal-inner, .flip-google-inner {
+.flip-paypal-inner, .flip-google-inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -271,19 +276,19 @@ header > span {
     transform-style: preserve-3d;
 }
   
-.flip-paypal:hover .flip-paypal-inner, .flip-google:hover .flip-google-inner {
+.flip-paypal:hover .flip-paypal-inner, .flip-google:hover .flip-google-inner{
     transform: rotateY(180deg);
 }
   
-.flip-paypal-front, .flip-paypal-back, .flip-google-front, .flip-google-back {
+.flip-paypal-front, .flip-paypal-back, .flip-google-front, .flip-google-back{
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
 }
 
-.flip-paypal-back, .flip-google-back {
+.flip-paypal-back, .flip-google-back{
     background-color: rgb(229, 230, 243);
     color: rgb(2, 2, 2);
     transform: rotateY(180deg);
@@ -291,42 +296,38 @@ header > span {
     border-radius: 8px;
 }
 
-.flip-paypal:focus-within .flip-paypal-inner, .flip-paypal:active .flip-paypal-inner, .flip-paypal:focus .flip-paypal-inner {
+.flip-paypal:focus-within .flip-paypal-inner, .flip-paypal:active .flip-paypal-inner, .flip-paypal:focus .flip-paypal-inner{
     transform: rotateY(180deg);
 } 
 
-.flip-google:focus-within .flip-google-inner, .flip-google:active .flip-google-inner, .flip-google:focus .flip-google-inner {
+.flip-google:focus-within .flip-google-inner, .flip-google:active .flip-google-inner, .flip-google:focus .flip-google-inner{
     transform: rotateY(180deg);
 } 
 
-.destinations span {
+.destinations span{
     display: grid;
-    flex-wrap: wrap;
     background-color: rgb(192, 195, 236);
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid black; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden; 
+    border-right: .15em solid black; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
     animation: 
       typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+      blinker .75s step-end infinite;
 }
-  
-  /* The typing effect */
-@keyframes typing {
+
+@keyframes typing{
     from { width: 0 }
     to { width: 100% }
 }
   
-  /* The typewriter cursor effect */
-@keyframes blink-caret {
+@keyframes blinker{
     from, to { border-color: transparent }
     50% { border-color: black; }
 }
 
-.lightbox .lb-image {
+.lightbox .lb-image{
     margin: 0px;
     padding: 0px;
 }
@@ -341,18 +342,12 @@ header > span {
         flex-direction: row;
     }
 
-    .first-three{
-        display: flex;
+    .name-num-email{
         flex-direction: row;
         margin-left: 20px;
     }
 
-    .next-two{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .question-opt{
+    .question-option{
         display: flex;
         flex-direction: column;
     }
@@ -366,12 +361,6 @@ header > span {
         flex-direction: row;
         justify-content: center;
         margin: 40px;
-       
-    }
-
-    .lightbox .lb-image {
-        margin: 0px;
-        padding: 0px;
     }
 
     .work-content1{
@@ -406,8 +395,6 @@ header > span {
         width: 430px;
         height: 300px;
     }
-
-
 }
 
 @media screen and (min-width: 1000px){
@@ -420,29 +407,17 @@ header > span {
     }
 
     .photosText, .lifestyleText{
-        display: flex;
-        flex-direction: column;
         padding-right: 80px;
         padding-left: 80px;
-        text-align: center;
-    }
-
-    .foods{
-        flex-direction: row;
     }
 
     .destinations{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-right: 20px;
-        margin-left: 20px;
     }
 
-    .destinations div{
-        flex-direction: column;
-        flex-wrap: wrap;
+    .destinations img{
+        height: auto;
+        width: 170px;
     }
 
     .beijing{
@@ -454,13 +429,11 @@ header > span {
         grid-row: 3 / 4;
     }
 
-    .destinations span{
-        word-wrap: break-word;
+    .work-content{
+        grid-template-columns: 1fr 1fr 2fr;
     }
 
-    .work-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
+    .work-content p{
         text-align: justify;
     }
 
@@ -477,7 +450,6 @@ header > span {
 
     .work-content2{
         grid-area: 2 / 2 / 3 / 4;
-        margin-top: 20px;
         margin-bottom: 20px;
         margin-right: 50px;
     }
@@ -492,15 +464,11 @@ header > span {
     }
 
     .main-content{
-        padding-right: 80px;
-        padding-left: 80px;
-        text-align: center;
+        padding-right: 70px;
+        padding-left: 70px;
     }
 
     .headshot-video{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
         margin: 50px;
     }
 
@@ -513,42 +481,9 @@ header > span {
         height: 300px;
     }
 
-    .first-three{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .next-two{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .question-opt{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .options{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
     textarea{
         width: 700px;
     }
-
-    .lightbox .lb-image {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .destinations img{
-        height: auto;
-        width: 170px;
-    }
-
-
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -561,7 +496,6 @@ header > span {
         animation-duration: 0s;
     }
 
-    /* flip card add */
     .flip-google-back, .flip-paypal-back{
         display: none;
     }
@@ -594,6 +528,4 @@ header > span {
         -webkit-transition: initial; 
         transition: initial; 
     }
-    
-
 }
