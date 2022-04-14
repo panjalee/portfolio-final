@@ -248,6 +248,11 @@ header > span {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    text-align: center;
+}
+
+.work-content1 {
+    margin-top: 0px;
 }
 
 .flip-paypal, .flip-google {
@@ -326,6 +331,9 @@ header > span {
     padding: 0px;
 }
   
+.beijing span, .bela-bela span{
+    margin-bottom: 20px;
+}
 
 @media screen and (min-width: 720px){
     header ul{
@@ -394,6 +402,11 @@ header > span {
         flex-direction: row;
     }
 
+    iframe{
+        width: 430px;
+        height: 300px;
+    }
+
 
 }
 
@@ -421,7 +434,6 @@ header > span {
     .destinations{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        column-gap: 30px;
         justify-content: center;
         flex-wrap: wrap;
         margin-right: 20px;
@@ -449,13 +461,13 @@ header > span {
     .work-content{
         display: grid;
         grid-template-columns: 1fr 1fr 2fr;
+        text-align: justify;
     }
 
     .work-content1{
         grid-area: 1 / 2 / 2 / 4;
-        margin-top: 50px;
-        margin-right: 60px;
-        text-align: justify;
+        margin-bottom: 10px;
+        margin-right: 50px;
     }
 
     .flip-paypal{
@@ -465,9 +477,13 @@ header > span {
 
     .work-content2{
         grid-area: 2 / 2 / 3 / 4;
-        margin-top: 50px;
-        margin-right: 60px;
-        text-align: justify;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+    }
+
+    .work-content2 p{
+        margin-top: 30px;
     }
 
     .flip-google{
@@ -489,7 +505,12 @@ header > span {
     }
 
     .video{
-        margin-left: 150px;
+        margin-left: 100px;
+    }
+
+    iframe{
+        width: 600px;
+        height: 300px;
     }
 
     .first-three{
@@ -520,6 +541,11 @@ header > span {
     .lightbox .lb-image {
         margin: 0px;
         padding: 0px;
+    }
+
+    .destinations img{
+        height: auto;
+        width: 170px;
     }
 
 
