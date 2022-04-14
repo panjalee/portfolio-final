@@ -363,6 +363,10 @@ header > span {
         margin: 40px;
     }
 
+    .headshot{
+        height: 310px;
+    }
+
     .work-content1{
         grid-row: 1 / 2;
     }
